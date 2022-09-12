@@ -64,13 +64,13 @@ contract Owner {
         return owner;
     }
 }
-contract LendMyNFT is Owner{
+contract NFTRental is Owner{
 
     IERC721 public nft;
     IERC20 usdc;
 
     constructor () {
-        usdc = IERC20(0xc60330eBfD65CcD6D88A3f296d1a6AeE76e807a1); // usdc rinkeby
+        usdc = IERC20(0x00000000000000000000000000); // usdc rinkeby
         interest = 10;//default
         
     }
@@ -114,7 +114,7 @@ contract LendMyNFT is Owner{
     function borrow (IERC721 _nft,uint256 _tokenId, uint256 _price, uint256 _endTime) public returns(uint256 LoanId) {
         _generateCollateral(_nft,_tokenId,_price);
         uint256 weiAmount = stake[_tokenId].price * 70/100;
-        require(usdc.balanceOf(address(this))>=weiAmount, "Error :: Not enough balance USDC to lend");
+        require(usdc.balanceOf(address(this))>=weiAmount, "Error :: Not enough balance USDC to Rent");
         uint256 _endt = block.timestamp + _endTime;
         nft.transferFrom(msg.sender,address(this),_tokenId);
         usdc.transfer(msg.sender,weiAmount);
@@ -127,15 +127,14 @@ contract LendMyNFT is Owner{
     function viewLoan(uint256 _loanId)public view returns(uint256,uint256,uint256,bool){
         return (loans[_loanId].endTime,loans[_loanId].principal,loans[_loanId].tokenId,loans[_loanId].isActive );
     }
-    // Borrower needs to approve contract for transferFrom of USDC amount in USDC contract.
     
     function rePay(uint256 _loanId) public {
-        // require(block.timestamp<loans[_loanId].endTime, "Error: Repayment time expired");
-        // require(msg.sender == loans[_loanId].borrower);
-        // require(loans[_loanId].isActive, "This loan is no longer active");
+        require(block.timestamp<loans[_loanId].endTime, "Error: Repayment time expired");
+        require(msg.sender == loans[_loanId].borrower);
+        require(loans[_loanId].isActive, "This loan is no longer active");
         nft = stake[_loanId].nftAddress;
-        // uint256 elapsedTime = block.timestamp - loans[_loanId].startTime;
-        // uint256 rePayAmount = loans[_loanId].principal + loans[_loanId].principal*loans[_loanId].rate * elapsedTime/(60*60*24*365*100);
+        uint256 elapsedTime = block.timestamp - loans[_loanId].startTime;
+        uint256 rePayAmount = loans[_loanId].principal + loans[_loanId].principal*loans[_loanId].rate * elapsedTime/(60*60*24*365*100);
         uint256 rePayAmount = loans[_loanId].principal ;
         usdc.transferFrom(msg.sender, address(this), rePayAmount);
         nft.setApprovalForAll(msg.sender,true);
