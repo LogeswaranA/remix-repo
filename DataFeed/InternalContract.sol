@@ -76,6 +76,21 @@ contract InternalContract is PluginClient, Ownable {
     emit requestCreated(_caller, stringToBytes32(jobId), requestId);
   }
 
+ function testMyFunc()
+    public
+    onlyOwner
+    returns (bytes32 requestId)
+  {    
+    //Built a oracle request with the following params
+    Plugin.Request memory req = buildPluginRequest(stringToBytes32(jobId), this, this.fulfill.selector);
+    req.add("_fsysm","XDC");
+    req.add("_tsysm","USDT");
+    req.addInt("times", 100);
+    requestId = sendPluginRequestTo(oracle, req, ORACLE_PAYMENT);
+    emit requestCreated(_caller, stringToBytes32(jobId), requestId);
+  }
+
+
   //callBack function
   function fulfill(bytes32 _requestId, uint256 _currentval)
     public
