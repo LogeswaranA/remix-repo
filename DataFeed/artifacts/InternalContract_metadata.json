@@ -445,9 +445,9 @@
 			]
 		},
 		"DataFeed/InternalContract.sol": {
-			"keccak256": "0xf6204b854837e6b3d6c7c169f868615b68ec69c1d2b4e06717193caec2ab5e66",
+			"keccak256": "0x44ffabd74a623a9f934bb91d55ecd3ed79c7acebfdab758bfd282d2bb1ee5922",
 			"urls": [
-				"bzzr://7ca0cf2983cb2a6c65f333de1e8eb38ac3f69e2ac25eaa077adb0c2ee2f6addc"
+				"bzzr://2f12a5d1a0e7403a04bc4917dd3bba283912f0e0906c9828f26af04166ab7450"
 			]
 		}
 	},
