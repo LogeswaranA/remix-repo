@@ -1,0 +1,470 @@
+{
+	"compiler": {
+		"version": "0.8.6+commit.11564f7e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_firstname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_lastname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_medid",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_bloodtype",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_height",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_weight",
+						"type": "string"
+					}
+				],
+				"name": "addDonor",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_firstname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_lastname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_medid",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_bloodtype",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_height",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_weight",
+						"type": "string"
+					}
+				],
+				"name": "addPatient",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "donors",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "firstname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "lastname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "medid",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "bloodtype",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "height",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "weight",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "status",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fetchAllDonors",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "firstname",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "lastname",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "medid",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "bloodtype",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "height",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "weight",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "status",
+								"type": "string"
+							}
+						],
+						"internalType": "struct OrganDonation.Donor[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "fetchAllPatients",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "firstname",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "lastname",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "medid",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "bloodtype",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "height",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "weight",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "status",
+								"type": "string"
+							}
+						],
+						"internalType": "struct OrganDonation.Patient[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "getAllDonors",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "getAllPatients",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "patients",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "firstname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "lastname",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "medid",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "bloodtype",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "height",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "weight",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "status",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_medid",
+						"type": "string"
+					}
+				],
+				"name": "validateMedicalData",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"OrganDonation/Organ.sol": "OrganDonation"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/contracts/utils/Counters.sol": {
+			"keccak256": "0xf0018c2440fbe238dd3a8732fa8e17a0f9dce84d31451dc8a32f6d62b349c9f1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://59e1c62884d55b70f3ae5432b44bb3166ad71ae3acd19c57ab6ddc3c87c325ee",
+				"dweb:/ipfs/QmezuXg5GK5oeA4F91EZhozBFekhq5TD966bHPH18cCqhu"
+			]
+		},
+		"OrganDonation/Organ.sol": {
+			"keccak256": "0x37a541789cb6b8a8345b75e317f26c7360bb8cda9c060128d575ced78cd6c921",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://a97a84d4f59dbccf0ddc87987d18d5a73739a31425cc18dd7c4ac9a64aefa9e4",
+				"dweb:/ipfs/QmRhzsJBCp7UjcpJ2KyK8d1ndW8wmukHJsu8x4SHmn39dU"
+			]
+		}
+	},
+	"version": 1
+}
