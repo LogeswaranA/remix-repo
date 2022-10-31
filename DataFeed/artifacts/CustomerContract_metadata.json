@@ -69,9 +69,9 @@
 	},
 	"sources": {
 		"DataFeed/CustomerContract.sol": {
-			"keccak256": "0xad5ad6504b6845d31b8b8e9322421a89590687b097aa74523f9568e8631457a4",
+			"keccak256": "0x82355ab3fdf528f30e981ff6505de1d5e3d549d6b0c87120327abe8cc6383e85",
 			"urls": [
-				"bzzr://3bee52b27fb01f600b6f22b4db9988980f24b652f62de9412556e93b92ab830c"
+				"bzzr://76a13bdd7da301d4596618c37ac2a67a4f19e46dfbdd0e52e07b2466c25e3e56"
 			]
 		}
 	},

@@ -6,7 +6,7 @@ interface IInvokeOracle{
 }
 
 contract CustomerContract{
-    address CONTRACTADDR = 0x1a8D6F587456b5b28e9f76D53fC38545E184D381;
+    address CONTRACTADDR = 0xb75E36480418f464F9E9b0D21F00BFe9d2ea3D37;
     bytes32 public requestId; 
 
     //Fund this contract with sufficient PLI, before you trigger below function. 

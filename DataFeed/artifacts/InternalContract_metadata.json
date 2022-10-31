@@ -8,6 +8,20 @@
 			{
 				"constant": false,
 				"inputs": [],
+				"name": "testMyFunc",
+				"outputs": [
+					{
+						"name": "requestId",
+						"type": "bytes32"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
 				"name": "withdrawPli",
 				"outputs": [],
 				"payable": false,
@@ -445,9 +459,9 @@
 			]
 		},
 		"DataFeed/InternalContract.sol": {
-			"keccak256": "0x44ffabd74a623a9f934bb91d55ecd3ed79c7acebfdab758bfd282d2bb1ee5922",
+			"keccak256": "0x432d7e14fb0ae1e6f0093ee4cfd10082ac0219bda1444600df12ed4dd076ad3e",
 			"urls": [
-				"bzzr://2f12a5d1a0e7403a04bc4917dd3bba283912f0e0906c9828f26af04166ab7450"
+				"bzzr://d7c778f7f11fabe6d394a082094cb7a8192b28ae0ac7379191b65afd08d51af8"
 			]
 		}
 	},

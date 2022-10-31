@@ -7,6 +7,7 @@ contract InternalContract is PluginClient, Ownable {
     
   //Initialize Oracle Payment     
   uint256 constant private ORACLE_PAYMENT = 0.01 * 10**18;
+  uint256 constant private MAX_DEPOSIT = 100*10**18;
   address public oracle;  // "0x97A6d407f4CD30936679d0a28A3bc2A7F13a2185"
   string  public jobId;   // "32abe898ea834e328ebeb714c5a0991d"
   uint256 public currentValue;
@@ -36,7 +37,7 @@ contract InternalContract is PluginClient, Ownable {
   }
 
   function depositPLI(uint256 _value) public returns(bool) {
-      require(_value<=100*10**18,"NOT_MORE_THAN_100_ALLOWED");
+      require(_value <= MAX_DEPOSIT,"Not more than 100 allowed");
       //Transfer PLI to contract
       PliTokenInterface pli = PliTokenInterface(pluginTokenAddress());
       pli.transferFrom(msg.sender,address(this),_value);
@@ -87,7 +88,7 @@ contract InternalContract is PluginClient, Ownable {
     req.add("_tsysm","USDT");
     req.addInt("times", 100);
     requestId = sendPluginRequestTo(oracle, req, ORACLE_PAYMENT);
-    emit requestCreated(_caller, stringToBytes32(jobId), requestId);
+    // emit requestCreated(_caller, stringToBytes32(jobId), requestId);
   }
 
 
